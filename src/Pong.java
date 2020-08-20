@@ -58,7 +58,11 @@ public class Pong {
 	}
 
 	private void run() {
-		
+		while(!finished) {
+            logic();
+            render();
+            sync();
+        }	
 	}
 
 	private void init() {
