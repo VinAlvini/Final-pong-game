@@ -51,10 +51,10 @@ public class Pong {
         init();
         run();
         quit();
-    }
+      }
 	
 	private void quit() {
-		
+	 window.dispose();
 	}
 
 	private void run() {
@@ -62,8 +62,14 @@ public class Pong {
             logic();
             render();
             sync();
-        }	
+            }	
 	}
+	
+	 private void logic() {
+        if (keys[KeyEvent.VK_ESCAPE]) {
+            finished = true;
+            return;
+        }
 
 	private void init() {
 		
